@@ -5,7 +5,4 @@ public class GitTest {
     public void y() {
     }
 
-    public void z() {
-
-    }
 }
