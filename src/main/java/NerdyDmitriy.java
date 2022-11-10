@@ -1,12 +1,10 @@
 public class NerdyDmitriy {
 
     public static double max(double a, double b) {
-
         if (a > b) {
             return a;
-        } else {
-            return b;
         }
+        return a;
     }
 
     public static int factorial(int a) {
