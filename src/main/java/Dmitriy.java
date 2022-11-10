@@ -34,11 +34,10 @@ public class Dmitriy {
 
         //System.out.println(unicharString);
 
-        //boolean isUnicharString = new NerdyDmitriy().isUnicharString("aaaa");
+//        boolean isUnicharString = new NerdyDmitriy().isUnicharString("a");
+//        System.out.println(isUnicharString);
 
-        //System.out.println(isUnicharString);
-
-        // int countChar = new NerdyDmitriy().countChar("my name is alex and im a begginer coder",'i');
+//         int countChar = new NerdyDmitriy().countChar("my name is alex and im a begginer coder",'i');
 
         //System.out.println(countChar);
 
@@ -48,7 +47,7 @@ public class Dmitriy {
 
         //System.out.println(countWords);
 
-        //boolean isDoubleSpace = new NerdyDmitriy().isDoubleSpace("my name is alex and im a  begginer coder");
+//        boolean isDoubleSpace = new NerdyDmitriy().isDoubleSpace("aa");
 
         //System.out.println(isDoubleSpace);
 

@@ -1,10 +1,7 @@
 public class NerdyDmitriy {
 
     public static double max(double a, double b) {
-        if (a > b) {
-            return a;
-        }
-        return a;
+        return Math.max(a, b);
     }
 
     public static int factorial(int a) {
@@ -24,7 +21,7 @@ public class NerdyDmitriy {
     }
 
     public boolean isPalindrome(String a) {
-        String b = "";
+        String b = "";//fixme StringBuilder
         for (int i = a.length() - 1; i >= 0; i--) {
             b += a.charAt(i);
         }
@@ -37,7 +34,7 @@ public class NerdyDmitriy {
     }
 
     public String unicharString(char c, int n) {
-        String s = "";
+        String s = "";//fixme StringBuilder
         for (int i = 0; i < n; i++) {
             s += c;
         }
@@ -75,10 +72,8 @@ public class NerdyDmitriy {
 
     public boolean isDoubleSpace(String s) {
         for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == 32) {
-                if (s.charAt(i + 1) == 32) {
-                    return true;
-                }
+            if (s.charAt(i) == ' ' && s.charAt(i + 1) == ' ') {
+                return true;
             }
         }
         return false;
@@ -86,10 +81,8 @@ public class NerdyDmitriy {
 
     public String deleteDoubleSpace(String s) {
         for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == 32) {
-                if (s.charAt(i + 1) == 32) {
-                    return s.replace("  ", " ");
-                }
+            if (s.charAt(i) == ' ' && s.charAt(i + 1) == ' ') {
+                return s.replace("  ", " ");
             }
         }
         String b = "String has no double spaces";
@@ -101,16 +94,11 @@ public class NerdyDmitriy {
     }
 
     public String dublicateChar(String s) {
-        String a = "";
+        String a = "";//fixme StringBuilder
         for (int i = 0; i < s.length(); i++) {
-            a += s.charAt(i) + s.substring(i, i+1);
-
+            a += s.charAt(i);
+            a += s.charAt(i);
         }
         return a;
     }
 }
-
-
-
-
-
