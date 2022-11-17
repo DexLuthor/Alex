@@ -30,7 +30,7 @@ public class Dmitriy {
 
         //System.out.println("String is a Palindrome " + isPalindrome);
 
-        //String unicharString = new NerdyDmitriy().unicharString('x',3);
+        //StringBuilder unicharString = new NerdyDmitriy().unicharString('x',3);
 
         //System.out.println(unicharString);
 
@@ -61,9 +61,9 @@ public class Dmitriy {
 
         //System.out.println(deleteDoubleSpaceCheat);
 
-        String dublicateChar = new NerdyDmitriy().dublicateChar("Hello");
+        //StringBuilder dublicateChar = new NerdyDmitriy().dublicateChar("Hello");
 
-        System.out.println(dublicateChar);
+        //System.out.println(dublicateChar);
 
     }
 }

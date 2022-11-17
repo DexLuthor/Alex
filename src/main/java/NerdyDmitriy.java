@@ -21,9 +21,9 @@ public class NerdyDmitriy {
     }
 
     public boolean isPalindrome(String a) {
-        String b = "";//fixme StringBuilder
+        StringBuilder b = new StringBuilder("");//fixme StringBuilder
         for (int i = a.length() - 1; i >= 0; i--) {
-            b += a.charAt(i);
+            b.append(a.charAt(i));
         }
         for (int i = 0; i < a.length(); i++) {
             if (a.charAt(i) != b.charAt(i)) {
@@ -33,10 +33,10 @@ public class NerdyDmitriy {
         return true;
     }
 
-    public String unicharString(char c, int n) {
-        String s = "";//fixme StringBuilder
+    public StringBuilder unicharString(char c, int n) {
+        StringBuilder s = new StringBuilder("");//fixme StringBuilder
         for (int i = 0; i < n; i++) {
-            s += c;
+            s.append(c);
         }
         return s;
     }
@@ -93,12 +93,14 @@ public class NerdyDmitriy {
         return s.replace("  ", " ");
     }
 
-    public String dublicateChar(String s) {
-        String a = "";//fixme StringBuilder
+    public StringBuilder dublicateChar(String s) {
+        StringBuilder a = new StringBuilder("");//fixme StringBuilder
         for (int i = 0; i < s.length(); i++) {
-            a += s.charAt(i);
-            a += s.charAt(i);
+            a.append(s.charAt(i));
+            a.append(s.charAt(i));
         }
         return a;
     }
+
+
 }
