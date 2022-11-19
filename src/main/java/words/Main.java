@@ -19,29 +19,42 @@ public class Main {
 //        System.out.println("You entered " + next);
 //
 
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-            String[] NATOAlphabet =
-                         {  "alpha", "bravo", "charlie",
-                            "delta", "echo", "foxtrot", "golf",
-                            "hotel", "india", "juliet",
-                            "kilo", "lima", "mike", "november",
-                            "oscar", "papa", "quebec", "romeo",
-                            "sierra", "tango", "uniform", "victor",
-                            "whiskey", "x-ray", "yankee", "zulu"     };
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String[] NATOAlphabet =
+                {"alpha", "bravo", "charlie",
+                        "delta", "echo", "foxtrot", "golf",
+                        "hotel", "india", "juliet",
+                        "kilo", "lima", "mike", "november",
+                        "oscar", "papa", "quebec", "romeo",
+                        "sierra", "tango", "uniform", "victor",
+                        "whiskey", "x-ray", "yankee", "zulu"};
 
 
-            //while(true) {
+        for (int c = 0; c < 100; c++) {
+            String next = scanner.next();
+            System.out.println("Player: " + next);
+            char lastLetter = next.charAt(next.length() - 1);
+            char firstLetter = next.charAt(0);
             for (int i = 0; i < NATOAlphabet.length; i++) {
-                String next = scanner.next();
-                System.out.println("You entered " + next);
-                if (next.charAt(next.length() - 1) != NATOAlphabet[i].charAt(i)){
-                    return;
+                if (lastLetter == NATOAlphabet[i].charAt(0)) {
+                    System.out.println("Computer: " + NATOAlphabet[i]);
+                    if (c > 0 && firstLetter != NATOAlphabet[i].charAt(0)) {
+                        System.out.println("Wrong!");
+                    }
                 }
-                System.out.println(NATOAlphabet[i]);
-
             }
         }
     }
+}
+
+//for (int i = 0; i < NATOAlphabet.length; i++) {
+//        if (lastLetter == NATOAlphabet[i].charAt(0)) {
+//        System.out.println("Computer: " + NATOAlphabet[i]);
+//        if (firstLetter == NATOAlphabet[i].charAt(3)) {
+//        break;
+//        }
+//        System.out.println("Wrong!");
+
 
 

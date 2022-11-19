@@ -1,54 +1,43 @@
 package encapsulation;
 
-import java.util.Scanner;
-
 public class Dot {
-    public double a;
-    public double b;
-    public double a2;
-    public double b2;
+    private double x;
+    private double y;
 
     public Dot(double x, double y) {
-        a = x;
-        b = y;
-        System.out.println("input second x coordinate");
-        a2 = scanner.nextInt();
-        System.out.println("input second y coordinate");
-        b2 = scanner.nextInt();
-        double distance = Math.sqrt(Math.pow(a2 - a, 2) + (Math.pow(b2 - b, 2)));
-        System.out.println(distance + " cm");
+        this.x = x;
+        this.y = y;
+
     }
 
     public Dot(double x) {
-        b = x;
-        System.out.println("input second x coordinate");
-        a2 = scanner.nextInt();
-        System.out.println("input second y coordinate");
-        b2 = scanner.nextInt();
-        double distance = Math.sqrt(Math.pow(a2 - a, 2) + (Math.pow(b2 - b, 2)));
-        System.out.println(distance + " cm");
+        this.x = x;
     }
 
-    public Dot() {
-        System.out.println("input second x coordinate");
-        a2 = scanner.nextInt();
-        System.out.println("input second y coordinate");
-        b2 = scanner.nextInt();
-        double distance = Math.sqrt(Math.pow(a2 - a, 2) + (Math.pow(b2 - b, 2)));
-        System.out.println(distance + " cm");
+    public Dot(int y) {
+        this.y = y;
     }
+    public Dot() {
+
+    }
+    public void setDot(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public double Distance(double x2, double y2) {
+        double distance = Math.sqrt(Math.pow(y2 - y, 2) + (Math.pow(x2 - x, 2)));
+        return distance;
+    }
+
+
 
     @Override
     public String toString() {
-        return "Dot (" + a + ',' + b + ')';
+        return "Dot (" + x + ',' + y + ')';
     }
-
-    public static void main(String[] args) {
-        Dot newDot = new Dot( 6);
-        System.out.println(newDot);
-
-
-    }
-
-    Scanner scanner = new Scanner(System.in);
 }
+
+
+
+
