@@ -1,6 +1,4 @@
-package inheritance;
-
-import encapsulation.Person;
+package oop.inheritance;
 
 @SuppressWarnings("all")
 public class InheritanceMain {

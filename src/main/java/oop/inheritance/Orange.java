@@ -1,6 +1,4 @@
-package inheritance;
-
-import java.util.Random;
+package oop.inheritance;
 
 @SuppressWarnings("all")
 

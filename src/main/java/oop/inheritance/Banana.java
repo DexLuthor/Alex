@@ -1,4 +1,4 @@
-package inheritance;
+package oop.inheritance;
 
 public class Banana {
 

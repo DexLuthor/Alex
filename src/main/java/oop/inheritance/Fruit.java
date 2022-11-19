@@ -1,4 +1,4 @@
-package inheritance;
+package oop.inheritance;
 
 import java.util.Random;
 
