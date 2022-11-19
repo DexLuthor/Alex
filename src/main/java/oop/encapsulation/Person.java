@@ -1,4 +1,4 @@
-package encapsulation;
+package oop.encapsulation;
 
 import java.util.Arrays;
 import java.util.Random;

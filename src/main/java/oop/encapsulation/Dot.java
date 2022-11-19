@@ -1,4 +1,4 @@
-package encapsulation;
+package oop.encapsulation;
 
 public class Dot {
     private double x;
@@ -7,7 +7,6 @@ public class Dot {
     public Dot(double x, double y) {
         this.x = x;
         this.y = y;
-
     }
 
     public Dot(double x) {
@@ -25,9 +24,8 @@ public class Dot {
         this.y = y;
     }
 
-    public double Distance(double x2, double y2) {
-        double distance = Math.sqrt(Math.pow(y2 - y, 2) + (Math.pow(x2 - x, 2)));
-        return distance;
+    public double distance(double x2, double y2) {
+        return Math.sqrt(Math.pow(y2 - y, 2) + (Math.pow(x2 - x, 2)));
     }
 
 

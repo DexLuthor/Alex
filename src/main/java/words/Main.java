@@ -34,14 +34,18 @@ public class Main {
         for (int c = 0; c < 100; c++) {
             String next = scanner.next();
             System.out.println("Player: " + next);
+
             char lastLetter = next.charAt(next.length() - 1);
             char firstLetter = next.charAt(0);
             for (int i = 0; i < NATOAlphabet.length; i++) {
-                if (lastLetter == NATOAlphabet[i].charAt(0)) {
-                    System.out.println("Computer: " + NATOAlphabet[i]);
-                    if (c > 0 && firstLetter != NATOAlphabet[i].charAt(0)) {
+                String word = NATOAlphabet[i];
+
+                if (lastLetter == word.charAt(0)) {
+                    System.out.println("Computer: " + word);
+                    if (c > 0 && firstLetter != word.charAt(word.length() - 1)) {
                         System.out.println("Wrong!");
                     }
+                    break;
                 }
             }
         }
