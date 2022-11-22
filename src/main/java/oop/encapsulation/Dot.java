@@ -30,19 +30,9 @@ public class Dot {
         return Math.sqrt(Math.pow(y2 - y, 2) + (Math.pow(x2 - x, 2)));
     }
 
-    public double distance(double x2) {
-
-        return Math.sqrt(Math.pow(0 - y, 2) + (Math.pow(x2 - x, 2)));
-    }
-
-    public double distance(int y2) {
-
-        return Math.sqrt(Math.pow(y2 - y, 2) + (Math.pow(0 - x, 2)));
-    }
-
-    public double distance() {
-
-        return Math.sqrt(Math.pow(0 - y, 2) + (Math.pow(0 - x, 2)));
+    public double distance(Dot dot) {
+//        return Math.sqrt(Math.pow(dot.y - y, 2) + (Math.pow(dot.x - x, 2)));
+        return distance(dot.x, dot.y);
     }
 
     //public Dot3D
