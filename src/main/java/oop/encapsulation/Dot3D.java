@@ -1,41 +1,34 @@
 package oop.encapsulation;
 
-import java.util.Scanner;
-
 public class Dot3D extends Dot {
-    public double a, b, c, a2, b2, c2;
+    private double x;
+    private double y;
+    private double z;
 
     public Dot3D(double x, double y, double z) {
-        a = x;
-        b = y;
-        c = z;
-        System.out.println("input second X coordinate");
-        a2 = scanner.nextInt();
-        System.out.println("input second Y coordinate");
-        b2 = scanner.nextInt();
-        System.out.println("input second Z coordinate");
-        c2 = scanner.nextInt();
-        double distance = Math.sqrt(Math.pow(a2 - a, 2) + (Math.pow(b2 - b, 2) + (Math.pow(c2 - c, 2))));
-        System.out.println(distance + " cm");
-
-
-
-
+        this.x = x;
+        this.y = y;
+        this.z = z;
     }
+
     @Override
     public String toString() {
-        return "Dot (" + a + ',' + b + ',' + c +')';
+        return "Dot (" + x + ',' + y + ',' + z + ')';
     }
 
-    public static void main(String[] args) {
-        Dot3D newDot = new Dot3D( 7,4,3);
-        System.out.println(newDot);
 
-
+    public double distance(double x2, double y2, double z2) {
+        return Math.sqrt(Math.pow(x2 - x, 2) + (Math.pow(y2 - y, 2) + (Math.pow(z2 - z, 2))));
     }
-
-    Scanner scanner = new Scanner(System.in);
+    public double distance(double x2, double y2) {
+        return Math.sqrt(Math.pow(x2 - x, 2) + (Math.pow(y2 - y, 2) + (Math.pow(0 - z, 2))));
+    }
+//    public double distance(double x2, int z2) {
+//        return Math.sqrt(Math.pow(x2 - x, 2) + (Math.pow(0 - y, 2) + (Math.pow(z2 - z, 2))));
+//    }
+//    public double distance(int y2, double z2) {
+//        return Math.sqrt(Math.pow(0 - x, 2) + (Math.pow(y2 - y, 2) + (Math.pow(z2 - z, 2))));
+//    }
 }
-
 
 
