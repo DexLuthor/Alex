@@ -1,6 +1,5 @@
 package collections;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -60,11 +59,12 @@ public class JCF {
 
         Map<String, List<Integer>> x = new HashMap<>();//LinkedHashMap, TreeMap
         //zheka -> [1,2,3,4]
-        Map<Integer, List<String>> ...
+        Map<Integer, List<String>> ...;
 
         Map<String, Map<String, Integer>> x;
 
         Collections.shuffle(list);
 //        Collections. ...
     }
+
 }
