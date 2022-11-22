@@ -1,8 +1,6 @@
 package oop.encapsulation;
 
 public class Dot3D extends Dot {
-    private double x;
-    private double y;
     private double z;
 
     public Dot3D(double x, double y, double z) {

@@ -33,30 +33,24 @@ public class BetterDmitriy extends Turtle {
             if (p < numberOfSides) {
                 this.shape(length, angle, numberOfSides);
                 this.turn(angle);
-            } else if (p < numberOfSides*2) {
-                this.shape(length, angle, numberOfSides);
-                this.turn(angle);
-                this.step(length);
-            } else if (p < numberOfSides*3) {
-                this.shape(length, angle, numberOfSides);
-                this.turn(angle);
-                this.step(length*2);
-            } else if (p < numberOfSides*4) {
-                this.shape(length, angle, numberOfSides);
-                this.turn(angle);
-                this.step(length*3);
-            } else if (p < numberOfSides*5) {
-                this.shape(length, angle, numberOfSides);
-                this.turn(angle);
-                this.step(length*4);
-            } else if (p < numberOfSides*6) {
-                this.shape(length, angle, numberOfSides);
-                this.turn(angle);
-                this.step(length*5);
+            } else if (p < numberOfSides * 2) {
+                shapeTurnStep(length, angle, numberOfSides);
+            } else if (p < numberOfSides * 3) {
+                shapeTurnStep(length, angle, numberOfSides);
+            } else if (p < numberOfSides * 4) {
+                shapeTurnStep(length, angle, numberOfSides);
+            } else if (p < numberOfSides * 5) {
+                shapeTurnStep(length, angle, numberOfSides);
+            } else if (p < numberOfSides * 6) {
+                shapeTurnStep(length, angle, numberOfSides);
             }
         }
     }
-
+    private void shapeTurnStep(int length, int angle, int numberOfSides) {
+        this.shape(length, angle, numberOfSides);
+        this.turn(angle);
+        this.step(length);
+    }
 
 }
 

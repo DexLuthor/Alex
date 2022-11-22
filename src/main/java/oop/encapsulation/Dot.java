@@ -1,8 +1,8 @@
 package oop.encapsulation;
 
 public class Dot {
-    private double x;
-    private double y;
+    double x;
+    double y;
 
     public Dot(double x, double y) {
         this.x = x;
@@ -41,8 +41,5 @@ public class Dot {
     public String toString() {
         return "Dot (" + x + ',' + y + ')';
     }
+
 }
-
-
-
-
