@@ -1,7 +1,6 @@
 import sk.upjs.jpaz2.Turtle;
 
 import java.awt.*;
-import java.util.ArrayList;
 import java.util.Random;
 
 public class StaticExample {
