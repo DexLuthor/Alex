@@ -2,7 +2,9 @@ package words;
 
 //import java.util.Scanner;
 
-import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
 
 public class Main {
     //    public static void main(String[] args) {
@@ -20,35 +22,49 @@ public class Main {
 //
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String[] NATOAlphabet =
-                {"alpha", "bravo", "charlie",
-                        "delta", "echo", "foxtrot", "golf",
-                        "hotel", "india", "juliet",
-                        "kilo", "lima", "mike", "november",
-                        "oscar", "papa", "quebec", "romeo",
-                        "sierra", "tango", "uniform", "victor",
-                        "whiskey", "x-ray", "yankee", "zulu"};
-
-
-        for (int c = 0; c < 100; c++) {
-            String next = scanner.next();
-            System.out.println("Player: " + next);
-
-            char lastLetter = next.charAt(next.length() - 1);
-            char firstLetter = next.charAt(0);
-            for (int i = 0; i < NATOAlphabet.length; i++) {
-                String word = NATOAlphabet[i];
-
-                if (lastLetter == word.charAt(0)) {
-                    System.out.println("Computer: " + word);
-                    if (c > 0 && firstLetter != word.charAt(word.length() - 1)) {
-                        System.out.println("Wrong!");
-                    }
-                    break;
+        List<String> vocabulary = new ArrayList<>();
+        try(Scanner vocabularyScanner = new Scanner(new File("src/main/resources/words.txt"))) {
+            while (vocabularyScanner.hasNext()) {
+                String vocabWord = vocabularyScanner.next();
+                if (vocabWord.length() > 3){
+                    vocabulary.add(vocabWord);
                 }
             }
+
+        } catch (FileNotFoundException e) {
+            System.err.println("couldn't load vocabulary");
+            return;
         }
+        Scanner inputScanner = new Scanner(System.in);
+        String computerWord = null;
+        Set<String> pastWords = new HashSet<>();
+        while (true) {
+            String playerWord = inputScanner.next();
+            if (computerWord != null && playerWord.charAt(0) != computerWord.charAt(computerWord.length() - 1) && pastWords.contains(playerWord)) {
+                System.out.println("\033[93mPlease enter another word that starts with " + computerWord.charAt(computerWord.length() - 1) + "\033[0m ");
+                continue;
+
+            }
+            computerWord = lookup(vocabulary, playerWord, pastWords);
+            if (computerWord == null) {
+                System.out.println("Computer: You beat me");
+                break;
+            }
+            System.out.println("Coumputer: " + computerWord);
+            pastWords.add(computerWord);
+            pastWords.add(playerWord);
+
+        }
+    }
+
+
+    private static String lookup(List<String> vocabulary, String next, Set<String> pastWords) {
+        for (String potentialWord : vocabulary) {
+            if (next.charAt(next.length() - 1) == potentialWord.charAt(0) && !pastWords.contains(potentialWord)) {
+                return potentialWord;
+            }
+        }
+        return null;
     }
 }
 

@@ -7,13 +7,13 @@ public class FinalExample {
     public final void test() {
         final double pi = 3.14;
 
-        i++;
+//        i++;
     }
 }
 
-class Child extends FinalExample {
-    @Override
-    public void test() {
-    }
-}
+//class Child extends FinalExample {
+//    @Override
+//    public void test() {
+//    }
+//}
 

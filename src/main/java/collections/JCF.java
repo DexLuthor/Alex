@@ -1,12 +1,6 @@
 package collections;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 
 public class JCF {
@@ -52,19 +46,19 @@ public class JCF {
 //        name -> phone
 
         Map<String, Integer> namesToPhones = new HashMap<>();//LinkedHashMap, TreeMap
-        namesToPhones.put("Alex", 123456789);
-        namesToPhones.put("Alex", 9876543);
-
-        Integer alexesPhone = namesToPhones.get("Alex");
-
-        Map<String, List<Integer>> x = new HashMap<>();//LinkedHashMap, TreeMap
-        //zheka -> [1,2,3,4]
-        Map<Integer, List<String>> ...;
-
-        Map<String, Map<String, Integer>> x;
-
-        Collections.shuffle(list);
+//        namesToPhones.put("Alex", 123456789);
+//        namesToPhones.put("Alex", 9876543);
+//
+//        Integer alexesPhone = namesToPhones.get("Alex");
+//
+//        Map<String, List<Integer>> x = new HashMap<>();//LinkedHashMap, TreeMap
+//        zheka -> [1,2,3,4]
+//        Map<Integer, List<String>> ...;
+//
+//        Map<String, Map<String, Integer>> x;
+//
+//        Collections.shuffle(list);
 //        Collections. ...
-    }
+  }
 
 }
