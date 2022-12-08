@@ -1,4 +1,4 @@
-package sb.dao;
+package sb.dao.jdbc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -8,8 +8,6 @@ import sb.controllers.dto.TodoDto;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 @Component
 public class TodoDao {
@@ -22,19 +20,6 @@ public class TodoDao {
                 getAll,
                 new TodoRowMapper()
         );
-        return dto;
-    }
-}
-
-class TodoRowMapper implements RowMapper<TodoDto> {
-
-    @Override
-    public TodoDto mapRow(ResultSet rs, int rowNum) throws SQLException {
-        long id = rs.getLong("id");
-        String content = rs.getString("content");
-        boolean done = rs.getBoolean("done");
-
-        TodoDto dto = new TodoDto(id, content, done);
         return dto;
     }
 }
